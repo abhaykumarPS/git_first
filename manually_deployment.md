@@ -1,0 +1,387 @@
+---
+# User change
+title: "Deploy a 3 node postgresql cluster with two hot standby servers that are read-only"
+
+weight: 2 # 1 is first, 2 is second, etc.
+
+# Do not modify these elements
+layout: "learningpathall"
+---
+
+##  Deploy 3 node of PostgreSQL 
+
+## Prerequisites
+
+* An [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)
+* [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* [AWS IAM authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
+* [Terraform](https://github.com/zachlas/arm-software-developers-ads/blob/main/content/install-tools/terraform.md)
+
+## Generate Access keys (access key ID and secret access key)
+
+The installation of Terraform on your desktop or laptop needs to communicate with AWS. Thus, Terraform needs to be able to authenticate with AWS. For authentication, generate access keys (access key ID and secret access key). These access keys are used by Terraform for making programmatic calls to AWS via the AWS CLI.
+
+### Go to My Security Credentials
+
+![image](https://user-images.githubusercontent.com/87687468/190137370-87b8ca2a-0b38-4732-80fc-3ea70c72e431.png)
+
+### On Your Security Credentials page click on create access keys (access key ID and secret access key)
+
+![image](https://user-images.githubusercontent.com/87687468/190137925-c725359a-cdab-468f-8195-8cce9c1be0ae.png)
+
+### Copy the Access Key ID and Secret Access Key 
+
+![image](https://user-images.githubusercontent.com/87687468/190138349-7cc0007c-def1-48b7-ad1e-4ee5b97f4b90.png)
+
+## Generate key-pair(public key, private key) using ssh keygen
+
+### Generate the public key and private key
+
+Before using Terraform, first generate the key-pair (public key, private key) using ssh-keygen. Then associate both public and private keys with AWS EC2 instances.
+
+Generate the key-pair using the following command:
+
+```console
+ssh-keygen -t rsa -b 2048
+```
+
+By default, the above command will generate the public as well as private key at location **$HOME/.ssh**. You can override the end destination with a custom path.
+
+Output when a key pair is generated:
+
+![Screenshot (319)](https://user-images.githubusercontent.com/92315883/213113265-620eee1b-319d-4318-acfa-fae9a802471d.png)
+
+
+**Note:** Use the public key mysql_key.pub inside the Terraform file to provision/start the instance and private key mysql_key to connect to the instance.
+
+
+## Deploy EC2 instance via Terraform
+
+After generating the public and private keys, we have to create an EC2 instance. Then we will push our public key to the **authorized_keys** folder in `~/.ssh`. We will also create a security group that opens inbound ports `22`(ssh) and `5432`(PSQL). Below is a Terraform file called `main.tf` which will do this for us.
+
+
+
+```
+// ssh-key gen
+resource "tls_private_key" task1_p_key  {
+    algorithm = "RSA"
+}
+resource "aws_key_pair" "task1-key" {
+    key_name    = "task1-key"
+    public_key = tls_private_key.task1_p_key.public_key_openssh
+  }
+resource "local_file" "public_key" {
+    depends_on = [
+      tls_private_key.task1_p_key,
+    ]
+    filename = pathexpand("~/.ssh/id_rsa.pub")
+    content  = tls_private_key.task1_p_key.public_key_openssh
+    file_permission = "400"
+}
+resource "local_file" "private_key" {
+    depends_on = [
+      tls_private_key.task1_p_key,
+    ]
+    filename = pathexpand("~/.ssh/id_rsa")
+    content  = tls_private_key.task1_p_key.private_key_openssh
+    file_permission = "400"
+}
+
+// instance creation
+
+provider "aws" {
+  region = "us-east-2"
+  access_key  = "AXXXXXXXXXXXXXXXX"
+  secret_key   = "AXXXXXXXXXXXXXXXX"
+}
+
+resource "aws_instance" "PSQL_TEST" {
+  ami           = "ami-064593a301006939b"
+  instance_type = "t4g.small"
+  security_groups= [aws_security_group.Terraformsecurity10.name]
+  key_name = "task1-key"
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> private_ips.txt && echo ${self.public_ip} >> public_ips.txt && echo ${self.public_dns} >> public_ips.txt"
+  }
+  tags = {
+    Name = "PSQL_TEST"
+  }
+}
+resource "aws_instance" "replica-PSQL_TEST" {
+  ami           = "ami-064593a301006939b"
+  instance_type = "t4g.small"
+  security_groups= [aws_security_group.Terraformsecurity10.name]
+  key_name = "task1-key"
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> private_ips.txt && echo ${self.public_ip} >> public_ips.txt && echo ${self.public_dns} >> public_ips.txt"
+  }
+  tags = {
+    Name = "replica-PSQL_TEST"
+  }
+                              
+}
+resource "aws_instance" "replica1-PSQL_TEST" {
+  ami           = "ami-064593a301006939b"
+  instance_type = "t4g.small"
+  security_groups= [aws_security_group.Terraformsecurity10.name]
+  key_name = "task1-key"
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> private_ips.txt && echo ${self.public_ip} >> public_ips.txt && echo ${self.public_dns} >> public_ips.txt"
+  }
+  tags = {
+    Name = "replica1-PSQL_TEST"
+  }
+
+}
+resource "aws_default_vpc" "main" {
+
+  tags = {
+
+    Name = "main"
+  }
+
+}
+
+resource "aws_security_group" "Terraformsecurity10" {
+  name        = "Terraformsecurity10"
+  description = "Allow TLS inbound traffic"
+  vpc_id      = aws_default_vpc.main.id
+
+  ingress {
+    description      = "TLS from VPC"
+    from_port        = 5432
+    to_port          = 5432
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+
+}
+
+  ingress {
+    description      = "TLS from VPC"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  tags = {
+
+    Name = "Terraformsecurity10"
+  }
+
+ }
+
+output "Master_public_IP" {
+
+  value = [aws_instance.PSQL_TEST.public_ip, aws_instance.replica-PSQL_TEST.public_ip, aws_instance.replica1-PSQL_TEST.public_ip]
+  
+}
+# Generate inventory file
+resource "local_file" "inventory" {
+    depends_on= [aws_instance.PSQL_TEST, aws_instance.replica-PSQL_TEST, aws_instance.replica1-PSQL_TEST]
+    filename = "/home/ubuntu/abhay/demo/hosts"
+    content = <<EOF
+                [db_master]
+                ${aws_instance.PSQL_TEST.public_ip}
+                [db_slave01]
+                ${aws_instance.replica-PSQL_TEST.public_ip}
+                [db_slave01]
+                ${aws_instance.replica1-PSQL_TEST.public_ip}
+                [all:vars]
+                ansible_connection=ssh
+                ansible_user=ubuntu
+                EOF
+}
+
+
+
+```
+**NOTE:-** Replace `public_key`, `access_key`, `secret_key`, and `key_name` with your values.
+
+Now, use the below Terraform commands to deploy the `main.tf` file.
+
+
+### Terraform Commands
+
+#### Initialize Terraform
+
+Run `terraform init` to initialize the Terraform deployment. This command is responsible for downloading all dependencies which are required for the AWS provider.
+
+```console
+terraform init
+```
+
+![Screenshot (320)](https://user-images.githubusercontent.com/92315883/213113408-91133eef-645c-44ed-9136-f48cce40e220.png)
+
+#### Create a Terraform execution plan
+
+Run `terraform plan` to create an execution plan.
+
+```console
+terraform plan
+```
+![image](https://user-images.githubusercontent.com/92078754/215394355-e4715e1f-95d9-4446-acdb-ab7116b1f34a.png)
+
+**NOTE:** The **terraform plan** command is optional. You can directly run **terraform apply** command. But it is always better to check the resources about to be created.
+
+#### Apply a Terraform execution plan
+
+Run `terraform apply` to apply the execution plan to your cloud infrastructure. The below command creates all required infrastructure.
+
+```console
+terraform apply
+```      
+![terraformaapl](https://user-images.githubusercontent.com/92078754/215390110-2514da83-ac67-4a28-99ed-020d68b6c71c.jpg)
+)
+
+## For configuration of master salve setup followed below steps on all the node
+
+Here is the 3 node deployed by terraform.
+
+**Primary node:** IP: 3.131.162.244
+
+**Replica node:** IP: 52.15.37.65
+
+**Replica1 node:** IP: 3.17.146.121
+
+## Step 1: Install PostgreSQL Server
+
+The first step is to install PostgreSQL on Primary and both Replica nodes. Take note that you need to install the same version of PostgreSQL on all 3 nodes for logical replication to take place.
+
+First, log in to your server via SSH and refresh the repositories.
+
+```
+sudo apt-get update
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-  key add -
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install postgresql-9.6  
+```
+
+## Step 2: Configure Primary Node
+ 
+ Next, log in to the primary node (3.131.162.244) as postgres user which is the default user that is created with every new PostgreSQL installation.
+ 
+```console
+sudo -u postgres psql
+```
+Therefore, run the following command to create the replication user and assign replication privileges. In this command, replication is the replication user while password is the user’s password.
+![image](https://user-images.githubusercontent.com/92078754/215404984-0fddcc8d-89ce-47f9-afb6-6e64b6671439.png)
+![image](https://user-images.githubusercontent.com/92078754/215403197-108e5bf6-cd8e-427e-9d44-cec1a107f841.png)
+
+Then log out from the PostgreSQL prompt.
+
+![image](https://user-images.githubusercontent.com/92078754/215403287-30edf599-8f59-483a-9b80-2d93db770cc5.png)
+
+Next, you need to make a few tweaks to the main configuration file **sudo vi /etc/postgresql/9.6/main/pg_hba.conf**.
+With the file open, scroll down and locate the listen_addresses directive. The directive specifies the host under which the PostgreSQL database server listens for connections.Uncomment the directive by removing the # symbol and replace localhost with localhost ‘*’ in single quotation marks as shown:
+
+![image](https://user-images.githubusercontent.com/92078754/215672554-cea0085b-7984-47c8-8a08-5b92600a5702.png)
+
+Next, locate the wal_level directive. The setting specifies the amount of information to be written to the Write Ahead Log (WAL) file.
+Uncomment the line and set it to hot_standby as shown.
+
+![image](https://user-images.githubusercontent.com/92078754/215672966-699c9f8a-2aea-4eef-866d-6c9b48ea9688.png)
+
+Next, locate the max_wal_sender and wal_keep_segments.
+
+![image](https://user-images.githubusercontent.com/92078754/215673333-0d74b741-74e3-48b9-8bcf-fd502537a6ec.png)
+
+Next, locate the archive mode By default, it is set to off when  set to on it will store the backup of replica’s. Also add archive_commabd when we were store the data.
+
+![image](https://user-images.githubusercontent.com/92078754/215673668-ccdee57f-50ae-402e-a7dc-fded4857e9a7.png)
+
+That’s all for the changes needed in this configuration file. Save the changes and exit.
+
+Next, create a archive directory.
+```console
+sudo mkdir /var/lib/postgresql/9.6/archive
+```
+
+Next, access the **/etc/postgresql/9.6/main/pg_hba.conf** configuration file.
+Append this line at the end of the configuration file. This allows the replica and replica1(52.15.37.65, 3.17.146.121) to connect with the master node using the replication.
+
+![image](https://user-images.githubusercontent.com/92078754/215675176-97301817-e7c1-4132-b427-13ad33b9b48a.png)
+
+Save the changes and close the file. The restart PostgreSQL service.
+
+```console
+sudo systemctl restart postgresql
+```
+## Step 3: Configure Replica Node
+
+Before the replica node can start replicating data from the master node, you need to create a copy of the primary node’s data directory to the replica’s data directory. To achieve this, first, stop the PostgreSQL service on the replica node.
+
+```console
+sudo systemctl stop PostgreSQL 
+```
+Next, remove all files in the replica’s data directory in order to start on a clean slate and make room for the primary node data directory.
+
+```console
+sudo rm -rf /var/lib/postgresql/9.6/main/*
+```
+
+Now run the pg_basebackup utility as shown to copy data from the primary node to the replica node.
+
+![image](https://user-images.githubusercontent.com/92078754/215405568-b7820bf2-92d1-4565-a305-d395455cf72f.png)
+
+Now we shall modify  sudo vim /etc/postgresql/9.6/main/pg_hba.conf changed here hot_standby=off to hot_standby=on.
+
+![image](https://user-images.githubusercontent.com/92078754/215675622-6b556e07-23d0-4bc2-b1bd-83e7f537648e.png)
+
+Last we need to create a recovery.conf file on our data directory. Else replication will not be happen.
+
+```console
+sudo vim /var/lib/postgresql/9.6/main/recovery.conf
+```
+![image](https://user-images.githubusercontent.com/92078754/215406000-6b73fd6f-304f-42b5-94a1-ca48e47df5e0.png)
+
+here we are telling that stand_by mode is on then we will saving our connection info with host address and replication user and password.
+
+Now, start the PostgreSQL server. The replica will now be running in hot standby mode.
+
+```console
+sudo systemctl start postgresql
+```
+
+## Step 4: Configure Replica1 Node
+
+**Note:** In here all steps are same as the Replica setup (step-3) for PostgreSQL installation.
+
+```console
+
+sudo systemctl stop PostgreSQL
+sudo rm -rv /var/lib/postgresql/9.6/main/*
+pg_basebackup -h 3.131.162.244 -D /var/lib/postgresql/9.6/main/ -P -U replication 
+sudo vim /etc/postgresql/9.6/main/pg_hba.conf ## hot_standby=on
+sudo vim /var/lib/postgresql/9.6/main/recovery.conf
+sudo systemctl start PostgreSQL
+
+```
+
+## Step 4: Test The Replication Setup
+
+In the **primary node**, created a database with database name psql.
+
+![image](https://user-images.githubusercontent.com/92078754/215406671-c1f4a69c-13b8-4b4d-b29f-b0596be32440.png)
+
+In the **replica node** the database psql we created in primary node will replicae on replica node. And when we are trying to write something here then it is giving error.
+
+![image](https://user-images.githubusercontent.com/92078754/215406768-3678a5b6-b232-4eb9-a88e-5c036ce1b20a.png)
+
+In **Replica1:** Here also the data from primary node is replicated and when we are trying to write something here then it is giving error.
+
+![image](https://user-images.githubusercontent.com/92078754/215406885-3e6bacb7-67a5-48be-a615-7bb0950dbdb9.png)
+
+
+
+
+
