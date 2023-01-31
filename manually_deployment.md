@@ -375,7 +375,7 @@ sudo systemctl start PostgreSQL
 
 In the **primary node**, created a database with database name psql.
 
-![image](https://user-images.githubusercontent.com/92078754/215406671-c1f4a69c-13b8-4b4d-b29f-b0596be32440.png)
+![image](https://user-images.githubusercontent.com/92078754/215730438-b3ec2ee5-ee35-4a95-a586-196b6d5e4134.png)
 
 In the **replica node** the database psql we created in primary node will replicae on replica node. And when we are trying to write something here then it is giving error.
 
@@ -383,7 +383,8 @@ In the **replica node** the database psql we created in primary node will replic
 
 In **Replica1:** Here also the data from primary node is replicated and when we are trying to write something here then it is giving error.
 
-![image](https://user-images.githubusercontent.com/92078754/215406885-3e6bacb7-67a5-48be-a615-7bb0950dbdb9.png)
+![image](https://user-images.githubusercontent.com/92078754/215729505-0e643d6a-9c32-42f2-804a-3bb67ce3497e.png)
+
 
 
 
