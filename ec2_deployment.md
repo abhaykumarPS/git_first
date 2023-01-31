@@ -61,7 +61,6 @@ Output when a key pair is generated:
 After generating the public and private keys, we have to create an EC2 instance. Then we will push our public key to the **authorized_keys** folder in `~/.ssh`. We will also create a security group that opens inbound ports `22`(ssh) and `5432`(PSQL). Below is a Terraform file called `main.tf` which will do this for us.
 
 
-
 ```// ssh-key gen
 resource "tls_private_key" task1_p_key  {
     algorithm = "RSA"
@@ -108,13 +107,9 @@ resource "aws_instance" "PSQL_TEST" {
   }
 }
 resource "aws_default_vpc" "main" {
-
   tags = {
-
     Name = "main"
-
   }
-
 }
 
 resource "aws_security_group" "Terraformsecurity10" {
@@ -129,7 +124,8 @@ resource "aws_security_group" "Terraformsecurity10" {
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
 }
-  ingress {
+ 
+ ingress {
     description      = "TLS from VPC"
     from_port        = 22
     to_port          = 22
@@ -148,11 +144,8 @@ egress {
     Name = "Terraformsecurity10"
   }
  }
-
 output "Master_public_IP" {
-
   value = [aws_instance.PSQL_TEST.public_ip]
-  
 }
 # Generate inventory file
 resource "local_file" "inventory" {
@@ -166,8 +159,6 @@ resource "local_file" "inventory" {
                 ansible_user=ubuntu
                 EOF
 }
-
-
 ```
 **NOTE:-** Replace `public_key`, `access_key`, `secret_key`, and `key_name` with your values.
 
