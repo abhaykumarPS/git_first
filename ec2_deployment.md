@@ -346,8 +346,7 @@ We can use below commands for show our databases and tables.
 ```console
 postgres# \l;
 ```
-![image](https://user-images.githubusercontent.com/92078754/215671912-29791942-79d7-4503-9428-f8d645230551.png)
-
+![image](https://user-images.githubusercontent.com/92078754/215725329-e1deae49-f608-4cba-8a5b-8a1acea87103.png)
 
 Use the below command for use existing databse.
 ```console
