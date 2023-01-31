@@ -251,6 +251,8 @@ Here is the 3 node deployed by terraform.
 
 **Replica1 node:** IP: 3.17.146.121
 
+**NOTE:** Replace {public_ip of instance} with your instance ip.
+
 ## Step 1: Install PostgreSQL Server
 
 The first step is to install PostgreSQL on Primary and both Replica nodes. Take note that you need to install the same version of PostgreSQL on all 3 nodes for logical replication to take place.
@@ -284,20 +286,20 @@ Then log out from the PostgreSQL prompt.
 Next, you need to make a few tweaks to the main configuration file **sudo vi /etc/postgresql/9.6/main/pg_hba.conf**.
 With the file open, scroll down and locate the listen_addresses directive. The directive specifies the host under which the PostgreSQL database server listens for connections.Uncomment the directive by removing the # symbol and replace localhost with localhost ‘*’ in single quotation marks as shown:
 
-![image](https://user-images.githubusercontent.com/92078754/215672554-cea0085b-7984-47c8-8a08-5b92600a5702.png)
+![image](https://user-images.githubusercontent.com/92078754/215722631-7ec6ac62-7726-4fee-821c-ad1149699efd.png)
 
 Next, locate the wal_level directive. The setting specifies the amount of information to be written to the Write Ahead Log (WAL) file.
 Uncomment the line and set it to hot_standby as shown.
 
-![image](https://user-images.githubusercontent.com/92078754/215672966-699c9f8a-2aea-4eef-866d-6c9b48ea9688.png)
+![image](https://user-images.githubusercontent.com/92078754/215723032-7e1486d7-8ac5-4eee-8be8-206c8a18eb24.png)
 
 Next, locate the max_wal_sender and wal_keep_segments.
 
-![image](https://user-images.githubusercontent.com/92078754/215673333-0d74b741-74e3-48b9-8bcf-fd502537a6ec.png)
+![image](https://user-images.githubusercontent.com/92078754/215723543-ece14cf8-f235-4a47-8966-0d6cbcb9e7da.png)
 
 Next, locate the archive mode By default, it is set to off when  set to on it will store the backup of replica’s. Also add archive_commabd when we were store the data.
 
-![image](https://user-images.githubusercontent.com/92078754/215673668-ccdee57f-50ae-402e-a7dc-fded4857e9a7.png)
+![image](https://user-images.githubusercontent.com/92078754/215724031-0e3813bd-7248-4372-981d-8601da395ae0.png)
 
 That’s all for the changes needed in this configuration file. Save the changes and exit.
 
@@ -309,7 +311,7 @@ sudo mkdir /var/lib/postgresql/9.6/archive
 Next, access the **/etc/postgresql/9.6/main/pg_hba.conf** configuration file.
 Append this line at the end of the configuration file. This allows the replica and replica1(52.15.37.65, 3.17.146.121) to connect with the master node using the replication.
 
-![image](https://user-images.githubusercontent.com/92078754/215675176-97301817-e7c1-4132-b427-13ad33b9b48a.png)
+![image](https://user-images.githubusercontent.com/92078754/215722066-6e575ba8-e8af-49bf-b5f9-cab44d426172.png)
 
 Save the changes and close the file. The restart PostgreSQL service.
 
@@ -335,7 +337,7 @@ Now run the pg_basebackup utility as shown to copy data from the primary node to
 
 Now we shall modify  sudo vim /etc/postgresql/9.6/main/pg_hba.conf changed here hot_standby=off to hot_standby=on.
 
-![image](https://user-images.githubusercontent.com/92078754/215675622-6b556e07-23d0-4bc2-b1bd-83e7f537648e.png)
+![image](https://user-images.githubusercontent.com/92078754/215724525-3efb4088-2118-4ba9-9138-41b50f076a66.png)
 
 Last we need to create a recovery.conf file on our data directory. Else replication will not be happen.
 
@@ -343,6 +345,8 @@ Last we need to create a recovery.conf file on our data directory. Else replicat
 sudo vim /var/lib/postgresql/9.6/main/recovery.conf
 ```
 ![image](https://user-images.githubusercontent.com/92078754/215406000-6b73fd6f-304f-42b5-94a1-ca48e47df5e0.png)
+
+**NOTE:** In primary conf info you can repalce host={with your public_ip}, user={with your rplication_name} and password={with you role_password}.
 
 here we are telling that stand_by mode is on then we will saving our connection info with host address and replication user and password.
 
