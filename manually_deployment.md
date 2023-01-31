@@ -88,7 +88,6 @@ resource "local_file" "private_key" {
 }
 
 // instance creation
-
 provider "aws" {
   region = "us-east-2"
   access_key  = "AXXXXXXXXXXXXXXXX"
@@ -117,8 +116,7 @@ resource "aws_instance" "replica-PSQL_TEST" {
   }
   tags = {
     Name = "replica-PSQL_TEST"
-  }
-                              
+  }                              
 }
 resource "aws_instance" "replica1-PSQL_TEST" {
   ami           = "ami-064593a301006939b"
@@ -131,15 +129,11 @@ resource "aws_instance" "replica1-PSQL_TEST" {
   tags = {
     Name = "replica1-PSQL_TEST"
   }
-
 }
 resource "aws_default_vpc" "main" {
-
   tags = {
-
     Name = "main"
   }
-
 }
 
 resource "aws_security_group" "Terraformsecurity10" {
@@ -153,7 +147,6 @@ resource "aws_security_group" "Terraformsecurity10" {
     to_port          = 5432
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
-
 }
 
   ingress {
@@ -170,36 +163,14 @@ resource "aws_security_group" "Terraformsecurity10" {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
   }
-
   tags = {
-
     Name = "Terraformsecurity10"
   }
-
  }
 
 output "Master_public_IP" {
-
-  value = [aws_instance.PSQL_TEST.public_ip, aws_instance.replica-PSQL_TEST.public_ip, aws_instance.replica1-PSQL_TEST.public_ip]
-  
+  value = [aws_instance.PSQL_TEST.public_ip, aws_instance.replica-PSQL_TEST.public_ip, aws_instance.replica1-PSQL_TEST.public_ip]  
 }
-# Generate inventory file
-resource "local_file" "inventory" {
-    depends_on= [aws_instance.PSQL_TEST, aws_instance.replica-PSQL_TEST, aws_instance.replica1-PSQL_TEST]
-    filename = "/home/ubuntu/abhay/demo/hosts"
-    content = <<EOF
-                [db_master]
-                ${aws_instance.PSQL_TEST.public_ip}
-                [db_slave01]
-                ${aws_instance.replica-PSQL_TEST.public_ip}
-                [db_slave01]
-                ${aws_instance.replica1-PSQL_TEST.public_ip}
-                [all:vars]
-                ansible_connection=ssh
-                ansible_user=ubuntu
-                EOF
-}
-
 
 
 ```
@@ -239,7 +210,6 @@ Run `terraform apply` to apply the execution plan to your cloud infrastructure. 
 terraform apply
 ```      
 ![terraformaapl](https://user-images.githubusercontent.com/92078754/215390110-2514da83-ac67-4a28-99ed-020d68b6c71c.jpg)
-)
 
 ## For configuration of master salve setup followed below steps on all the node
 
@@ -251,13 +221,11 @@ Here is the 3 node deployed by terraform.
 
 **Replica1 node:** IP: 3.17.146.121
 
-**NOTE:** Replace {public_ip of instance} with your instance ip.
-
 ## Step 1: Install PostgreSQL Server
 
 The first step is to install PostgreSQL on Primary and both Replica nodes. Take note that you need to install the same version of PostgreSQL on all 3 nodes for logical replication to take place.
 
-First, log in to your server via SSH and refresh the repositories.
+First, log in to your server via SSH and refresh the repositories and the follow below comand for postgres installation.
 
 ```
 sudo apt-get update
@@ -320,7 +288,7 @@ sudo systemctl restart postgresql
 ```
 ## Step 3: Configure Replica Node
 
-Before the replica node can start replicating data from the master node, you need to create a copy of the primary node’s data directory to the replica’s data directory. To achieve this, first, stop the PostgreSQL service on the replica node.
+Before the replica node can start replicating data from the master node, you need to create a copy of the primary node’s data directory to the replica’s data directory. To achieve this, first stop the PostgreSQL service on the replica node.
 
 ```console
 sudo systemctl stop PostgreSQL 
@@ -335,7 +303,7 @@ Now run the pg_basebackup utility as shown to copy data from the primary node to
 
 ![image](https://user-images.githubusercontent.com/92078754/215405568-b7820bf2-92d1-4565-a305-d395455cf72f.png)
 
-Now we shall modify  sudo vim /etc/postgresql/9.6/main/pg_hba.conf changed here hot_standby=off to hot_standby=on.
+Now we shall modify sudo vim /etc/postgresql/9.6/main/pg_hba.conf changed here hot_standby=off to hot_standby=on.
 
 ![image](https://user-images.githubusercontent.com/92078754/215724525-3efb4088-2118-4ba9-9138-41b50f076a66.png)
 
@@ -346,9 +314,9 @@ sudo vim /var/lib/postgresql/9.6/main/recovery.conf
 ```
 ![image](https://user-images.githubusercontent.com/92078754/215406000-6b73fd6f-304f-42b5-94a1-ca48e47df5e0.png)
 
-**NOTE:** In primary conf info you can repalce host={with your public_ip}, user={with your rplication_name} and password={with you role_password}.
+**NOTE:** In primary conf info you can replace host={with your public_ip}, user={with your rplication_name} and password={with you role_password}.
 
-here we are telling that stand_by mode is on then we will saving our connection info with host address and replication user and password.
+Here we are telling that stand_by mode is on then we will saving our connection info with host address and replication user and password.
 
 Now, start the PostgreSQL server. The replica will now be running in hot standby mode.
 
@@ -377,11 +345,11 @@ In the **primary node**, created a database with database name psql.
 
 ![image](https://user-images.githubusercontent.com/92078754/215730438-b3ec2ee5-ee35-4a95-a586-196b6d5e4134.png)
 
-In the **replica node** the database psql we created in primary node will replicae on replica node. And when we are trying to write something here then it is giving error.
+In the **replica node** the database psql we created in primary node will replicate on replica node. And when we are trying to write something here then it is giving below error.
 
 ![image](https://user-images.githubusercontent.com/92078754/215406768-3678a5b6-b232-4eb9-a88e-5c036ce1b20a.png)
 
-In **Replica1:** Here also the data from primary node is replicated and when we are trying to write something here then it is giving error.
+In **Replica1:** Here also the data from primary node is replicated and when we are trying to write something here then it is giving below error.
 
 ![image](https://user-images.githubusercontent.com/92078754/215729505-0e643d6a-9c32-42f2-804a-3bb67ce3497e.png)
 
