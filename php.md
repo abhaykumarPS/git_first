@@ -21,6 +21,7 @@ optional_info:
         partner_content: 
           - https://docs.newrelic.com/docs/apm/agents/php-agent/installation/php-agent-installation-arm64/
           - https://aws.amazon.com/blogs/compute/improving-performance-of-php-for-arm64-and-impact-on-amazon-ec2-m6g-instances/
+          - https://github.com/aws/aws-graviton-getting-started/blob/main/php.md
         official_docs: https://github.com/php/php-src 
 
 
