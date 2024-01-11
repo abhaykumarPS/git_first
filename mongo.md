@@ -21,9 +21,8 @@ optional_info:
           - https://learn.arm.com/learning-paths/servers-and-cloud-computing/mongodb/
           - https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/mongodb-performance-on-aws-with-the-arm-graviton2    
         partner_content: https://github.com/ArmDeveloperEcosystem/arm-learning-paths/blob/main/content/learning-paths/servers-and-cloud-computing/mongodb/perf_mongodb.md 
-        official_docs: 
-          - https://github.com/mongodb/mongo
-          - https://www.mongodb.com/
+        official_docs: https://github.com/mongodb/mongo
+
 
 
 optional_hidden_info:
