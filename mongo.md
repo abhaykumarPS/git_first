@@ -2,7 +2,7 @@
 name: MongoDB
 category: Databases - noSQL
 description: MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas.
-download_url:  https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+download_url: https://www.mongodb.com/download-center/enterprise/releases
 
 works_on_arm: true
 version:
@@ -18,7 +18,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-          - https://github.com/ArmDeveloperEcosystem/arm-learning-paths/tree/main/content/learning-paths/servers-and-cloud-computing/mongodb
+          - https://learn.arm.com/learning-paths/servers-and-cloud-computing/mongodb/
           - https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/mongodb-performance-on-aws-with-the-arm-graviton2    
         partner_content: https://github.com/ArmDeveloperEcosystem/arm-learning-paths/blob/main/content/learning-paths/servers-and-cloud-computing/mongodb/perf_mongodb.md 
         official_docs: 
