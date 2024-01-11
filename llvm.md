@@ -18,12 +18,12 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-                  - https://learn.arm.com/install-guides/llvm-embedded/
-                  - https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/accelerating-open-source-llvm-development
-                  - https://github.com/ARM-software/LLVM-embedded-toolchain-for-Arm
+            - https://learn.arm.com/install-guides/llvm-embedded/
+            - https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/accelerating-open-source-llvm-development
         partner_content: https://llvm.org/docs/TestingGuide.html
-        official_docs: https://github.com/llvm/llvm-project
-
+        official_docs: 
+            - https://github.com/llvm/llvm-project
+            - https://github.com/ARM-software/LLVM-embedded-toolchain-for-Arm
 
 optional_hidden_info:
     release_notes__supported_minimum: https://github.com/llvm/llvm-project/releases/tag/llvmorg-7.1.0
