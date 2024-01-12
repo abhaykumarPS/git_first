@@ -1,7 +1,7 @@
 ---
 name: Spark
 category: Databases - Big-data
-description: Apache Spark is an open-source, distributed processing system used for big data workloads. It utilizes in-memory caching, and optimized query execution for fast analytic queries against data of any size.
+description: Apache Spark is an open-source, distributed processing system used for big data workloads. 
 download_url: https://spark.apache.org/downloads.html
 
 works_on_arm: true
@@ -17,10 +17,8 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-          - https://learn.arm.com/learning-paths/servers-and-cloud-computing/spark/
-          - https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/spark-on-aws-graviton2-real-time-analysis-using-spark-streaming
-        partner_content: 
+        arm_content: https://learn.arm.com/learning-paths/servers-and-cloud-computing/spark/
+        partner_content: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/spark-on-aws-graviton2-real-time-analysis-using-spark-streaming
         official_docs: 
           - https://github.com/apache/spark
 
