@@ -1,7 +1,7 @@
 ---
 name: MongoDB
 category: Databases - noSQL
-description: MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas.
+description: MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product.
 download_url: https://www.mongodb.com/download-center/enterprise/releases
 
 works_on_arm: true
