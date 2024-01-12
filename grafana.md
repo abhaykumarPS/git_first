@@ -18,7 +18,6 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-          - https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/spark-on-aws-graviton2-real-time-analysis-using-spark-streaming
         partner_content: 
           - https://aws.amazon.com/grafana/
           - https://www.cherryservers.com/blog/install-grafana-ubuntu
