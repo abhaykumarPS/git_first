@@ -18,7 +18,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        partner_content: https://github.com/ShiftMediaProject/x264
+        partner_content: https://aws.amazon.com/blogs/opensource/optimized-video-encoding-with-ffmpeg-on-aws-graviton-processors/
         official_docs: https://code.videolan.org/videolan/x264
 
 
