@@ -1,0 +1,31 @@
+---
+name: PHP
+category: Web
+description: PHP is a general-purpose scripting language widely used as a server-side language for creating dynamic web pages.
+download_url: https://www.php.net/downloads.php
+works_on_arm: true
+supported_minimum_version:
+    version_number: 8.0.0
+    release_date: 26/11/2020
+
+
+optional_info:
+    homepage_url: https://www.php.net/
+    support_caveats:
+    alternative_options:
+    getting_started_resources:
+        arm_content: 
+        partner_content: 
+        official_docs: https://docs.newrelic.com/docs/apm/agents/php-agent/installation/php-agent-installation-arm64/
+    arm_recommended_minimum_version:
+        version_number: 
+        release_date: 
+
+
+optional_hidden_info:
+    release_notes__supported_minimum: https://docs.newrelic.com/docs/release-notes/agent-release-notes/php-release-notes/php-agent-10-10-0-1/#new-features
+    release_notes__recommended_minimum: 
+    other_info: 
+
+---
+
