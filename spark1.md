@@ -10,13 +10,13 @@ supported_minimum_version:
 
 
 optional_info:
-    homepage_url: 
+    homepage_url: https://spark.apache.org/
     support_caveats:
     alternative_options:
     getting_started_resources:
         arm_content: https://learn.arm.com/learning-paths/servers-and-cloud-computing/spark/
         partner_content:  https://aws.amazon.com/what-is/apache-spark/
-        official_docs: https://spark.apache.org/
+        official_docs: 
     arm_recommended_minimum_version:
         version_number: 
         release_date: 
