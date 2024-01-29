@@ -6,17 +6,17 @@ download_url: https://docs.ansible.com/ansible-tower/latest/html/quickinstall/do
 works_on_arm: true
 supported_minimum_version:
     version_number: 2.4
-    release_date: 
+    release_date: 15/08/2017
 
 
 optional_info:
-    homepage_url: 
+    homepage_url: https://www.ansible.com/
     support_caveats:
     alternative_options:
     getting_started_resources:
         arm_content: https://learn.arm.com/install-guides/ansible/
-        partner_content:
-        official_docs: 
+        partner_content: 
+        official_docs: https://www.redhat.com/fr/blog/red-hat-enterprise-linux-arm-now-supported-aws?source=author&term=25831
     arm_recommended_minimum_version:
         version_number: 
         release_date:
