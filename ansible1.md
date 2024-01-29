@@ -2,7 +2,7 @@
 name: Ansible
 category: DevOps
 description: Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain.
-download_url: https://docs.ansible.com/ansible-tower/latest/html/quickinstall/download_tower.html
+download_url: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 works_on_arm: true
 supported_minimum_version:
     version_number: 2.4
