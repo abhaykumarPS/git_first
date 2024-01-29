@@ -15,7 +15,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        partner_content: 
+        partner_content: https://aws.amazon.com/marketplace/pp/prodview-7vsdxgcwvrzqc
         official_docs: https://docs.newrelic.com/docs/apm/agents/php-agent/installation/php-agent-installation-arm64/
     arm_recommended_minimum_version:
         version_number: 
