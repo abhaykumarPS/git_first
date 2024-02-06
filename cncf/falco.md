@@ -1,7 +1,7 @@
 ---
 name: Falco
 category: Security & Compliance
-description: Falco is a cloud native runtime security tool for Linux operating systems. It is designed to detect and alert on abnormal behavior and potential security threats in real-time.
+description: Falco is a cloud native runtime security tool for Linux operating systems.
 download_url: https://falco.org/docs/install-operate/download/
 works_on_arm: true
 supported_minimum_version:
