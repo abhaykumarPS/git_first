@@ -15,7 +15,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/container-runtimes-wasmedge-arm 
-        partner_content: 
+        partner_content: https://aws.amazon.com/blogs/containers/all-you-need-to-know-about-moving-to-containerd-on-amazon-eks/ 
         official_docs: https://containerd.io/docs/getting-started/
     arm_recommended_minimum_version:
         version_number: 
@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: https://github.com/containerd/containerd/releases/download/v1.6.0/containerd-1.6.0-linux-arm64.tar.gz
     release_notes__recommended_minimum:
-    other_info: 
+    other_info: No ARM64 specific realease notes available but the first binary for ARM64 was released from v1.6.0.
 
 ---
