@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info:  
+    other_info:  No ARM64 specific release notes and binaries are available. Found the minimum supported version 
 
 ---
