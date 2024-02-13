@@ -2,11 +2,11 @@
 name: TiKV
 category: Database
 description: A distributed transactional key-value database. Based on the design of Google Spanner and HBase.
-download_url: 
+download_url: https://github.com/tikv/tikv/releases
 works_on_arm: true
 supported_minimum_version:
-    version_number: 
-    release_date: 
+    version_number: 5.1.0
+    release_date: 24/01/2021
 
 
 optional_info:
@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: 
+    other_info:  
 
 ---
