@@ -23,7 +23,7 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: https://github.com/rook/rook/releases/download/v0.1.0/rook-v0.1.0-linux-arm64.tar.gz
+    release_notes__supported_minimum: https://github.com/rook/rook/releases/tag/v0.1.0
     release_notes__recommended_minimum:
     other_info: No ARM64 specific realease notes available but the first binary for ARM64 was released from v0.1.0.
 
