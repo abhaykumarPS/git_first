@@ -15,7 +15,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        partner_content: 
+        partner_content: https://learn.microsoft.com/en-us/azure/container-apps/microservices-dapr-azure-resource-manager?tabs=bash&pivots=container-apps-arm
         official_docs: https://docs.dapr.io/getting-started/
     arm_recommended_minimum_version:
         version_number: 
