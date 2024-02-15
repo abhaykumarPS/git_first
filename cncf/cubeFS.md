@@ -16,7 +16,7 @@ optional_info:
     getting_started_resources:
         arm_content: 
         partner_content: 
-        official_docs: https://cubefs.io/docs/master/quick-start/manual-deploy.html#cluster-deployment
+        official_docs: https://github.com/cubefs/cubefs/blob/master/INSTALL.md
     arm_recommended_minimum_version:
         version_number: 
         release_date:
