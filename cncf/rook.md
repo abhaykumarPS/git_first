@@ -15,7 +15,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        partner_content: https://amperecomputing.com/assets/Deploying_Red_Hat_Open_Shift_4_11_as_Single_Node_Open_Shift_for_Edge_Computing_4179bc21d1.pdf
+        partner_content: https://blogs.oracle.com/linux/post/oracle-cloud-native-environment-17-kubevirt-rook
         official_docs: https://rook.github.io/docs/rook/latest-release/Getting-Started/quickstart/
     arm_recommended_minimum_version:
         version_number: 
