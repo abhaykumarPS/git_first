@@ -14,8 +14,8 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-        partner_content: https://blogs.oracle.com/linux/post/oracle-cloud-native-environment-17-kubevirt-rook
+        arm_content: https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/enabling-cloud-native-experience-across-a-diverse-and-secure-edge-ecosystem
+        partner_content: https://amperecomputing.com/assets/Deploying_Red_Hat_Open_Shift_4_11_as_Single_Node_Open_Shift_for_Edge_Computing_4179bc21d1.pdf
         official_docs: https://rook.github.io/docs/rook/latest-release/Getting-Started/quickstart/
     arm_recommended_minimum_version:
         version_number: 
