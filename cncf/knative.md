@@ -5,8 +5,8 @@ description: Knative is a developer-focused serverless application layer which i
 download_url: https://github.com/knative/serving/releases
 works_on_arm: true
 supported_minimum_version:
-    version_number: 
-    release_date: 
+    version_number: 0.19.0
+    release_date: 11/11/2020
 
 optional_info:
     homepage_url: https://knative.dev
@@ -22,7 +22,7 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: 
+    release_notes__supported_minimum: https://github.com/knative/client/blob/main/CHANGELOG.adoc#v0190-2020-11-11
     release_notes__recommended_minimum:
     other_info: 
     
