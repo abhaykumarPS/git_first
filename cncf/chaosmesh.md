@@ -22,7 +22,7 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: https://github.com/chaos-mesh/chaos-mesh/releases/tag/v1.1.0
+    release_notes__supported_minimum: https://github.com/chaos-mesh/chaos-mesh/wiki/Weekly-Update---2020#weekly-update-dec21---dec27
     release_notes__recommended_minimum:
     other_info: No ARM64 binary is released but before v1.1.0 a [PR](https://github.com/chaos-mesh/chaos-mesh/pull/1311) is raised and merged for adding ARM64 support through conditional compilation.
     
