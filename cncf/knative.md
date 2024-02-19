@@ -22,7 +22,7 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: https://github.com/knative/client/blob/main/CHANGELOG.adoc#v0190-2020-11-11
+    release_notes__supported_minimum: https://knative.dev/blog/releases/announcing-knative-v0-19-release/
     release_notes__recommended_minimum:
     other_info: 
     
