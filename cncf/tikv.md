@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: No ARM64 specific release notes and binaries are available. Found the minimum supported version by build from tar file.
+    other_info: No arm64 specific release notes are available. Installation and testing was done through tar file, found from version 5.1.0 it is supported on arm64.
 
 ---
