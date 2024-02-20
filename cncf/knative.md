@@ -2,7 +2,7 @@
 name: Knative
 category: Scheduling & Orchestration
 description: Knative is a developer-focused serverless application layer which is a great complement to the existing Kubernetes application constructs.
-download_url: https://github.com/knative/serving/releases
+download_url: https://github.com/knative/client/releases
 works_on_arm: true
 supported_minimum_version:
     version_number: 0.19.0
