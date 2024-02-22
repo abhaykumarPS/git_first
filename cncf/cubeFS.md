@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: https://github.com/cubefs/cubefs/releases/tag/v2.2.0
     release_notes__recommended_minimum:
-    other_info: In the release note of v2.2.0 it is mentioned that ARM64 support has been added through cross compilation.
+    other_info: In the release note of v2.2.0 it is mentioned that ARM64 support has been added through cross compilation on Ubuntu:14.04+ versions.
 
 ---
