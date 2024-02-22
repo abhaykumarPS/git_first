@@ -27,4 +27,7 @@ optional_hidden_info:
     release_notes__recommended_minimum:
     other_info: In the release note of v2.2.0 it is mentioned that ARM64 support has been added through cross compilation on Ubuntu:14.04+ versions.
 
+        other_info: In the release note, ARM64 support has been added from v2.2.0. To install minimum version, CubeFS require Ubuntu 14.04+ versions.
+
+
 ---
