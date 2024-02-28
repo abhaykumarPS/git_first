@@ -3,7 +3,7 @@ name: Splunk Cloud Platform
 vendor: Splunk
 category: Analytics
 description: Splunk is a big data platform that simplifies the task of collecting and managing massive volumes of machine-generated data and searching for information within it
-product_url: https://www.splunk.com/en_us/products/splunk-cloud-platform.html?301=/en_us/software/splunk-cloud-platform.html
+product_url: https://www.splunk.com/
 works_on_arm: true
 release_date_on_arm: 01/04/2022
 
