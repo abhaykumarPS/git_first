@@ -5,7 +5,7 @@ category: Observability
 description: The universal forwarder is a dedicated, streamlined version of Splunk Enterprise that contains only the essential components needed to forward data. 
 product_url: https://www.splunk.com/
 works_on_arm: true
-release_date_on_arm: 19/04/2023
+release_date_on_arm: 20/10/2020
 
 
 optional_info:
