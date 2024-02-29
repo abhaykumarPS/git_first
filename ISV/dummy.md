@@ -14,11 +14,10 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        partner_content: 
+        product_content: 
         official_docs: 
 
 optional_hidden_info:
-    release_notes__arm_supported: 
     other_info: 
 
 ---
