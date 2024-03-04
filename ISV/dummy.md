@@ -14,7 +14,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        product_content: 
+        vendor_announcement: 
         official_docs: 
 
 optional_hidden_info:
