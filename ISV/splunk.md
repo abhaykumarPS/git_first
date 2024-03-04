@@ -14,8 +14,8 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/using-splunk-for-cloud-to-edge-data-processing
-        product_content: https://www.splunk.com/en_us/blog/platform/splunk-embarks-on-aws-graviton-journey-with-amazon-ec2-im4gn-and-is4gen-instances.html
-        official_docs: https://community.splunk.com/t5/Installation/bd-p/installation
+        vendor_announcement: https://www.splunk.com/en_us/blog/platform/splunk-embarks-on-aws-graviton-journey-with-amazon-ec2-im4gn-and-is4gen-instances.html
+        official_docs: https://docs.splunk.com/Documentation/SplunkCloud/search2preview/SearchExperience/Gettingstarted
 
 optional_hidden_info:
     other_info: 
