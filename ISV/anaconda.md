@@ -7,15 +7,15 @@ product_url: https://www.anaconda.com/
 works_on_arm: true
 release_date_on_arm: 14/05/2021
 
-
 optional_info:
     homepage_url: https://www.anaconda.com/
     support_caveats:
     alternative_options:
     getting_started_resources:
         arm_content: https://learn.arm.com/install-guides/anaconda/
-        product_content: https://www.anaconda.com/blog/anaconda-aws-graviton2
+        vendor_announcement: https://www.anaconda.com/blog/anaconda-aws-graviton2
         official_docs: https://docs.anaconda.com/free/anaconda/install/index.html
+
         
 optional_hidden_info:
     other_info: 
