@@ -18,6 +18,6 @@ optional_info:
         official_docs: https://docs.splunk.com/Documentation/SplunkCloud/search2preview/SearchExperience/Gettingstarted
 
 optional_hidden_info:
-    other_info: 
+    other_info:
 
 ---
