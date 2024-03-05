@@ -14,7 +14,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        product_content: https://buildkite.com/changelog/115-aws-elastic-stack-support-for-arm-instances-rocket
+        vendor_announcement: https://buildkite.com/changelog/115-aws-elastic-stack-support-for-arm-instances-rocket
         official_docs: https://buildkite.com/blog/buildkite-and-arm-revisited
 
 optional_hidden_info:
