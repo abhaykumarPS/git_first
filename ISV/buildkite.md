@@ -5,7 +5,7 @@ category: DevOps
 description: The Buildkite Elastic CI Stack for AWS gives you a private, autoscaling Buildkite agent cluster. You can use the Buildkite Elastic CI Stack for AWS to parallelize large test suites across hundreds of nodes, run tests, app deployments, or AWS ops tasks.
 product_url: https://buildkite.com/
 works_on_arm: true
-release_date_on_arm: 21/12/2020
+release_date_on_arm: 11/12/2020
 
 
 optional_info:
@@ -18,6 +18,6 @@ optional_info:
         official_docs: https://buildkite.com/blog/buildkite-and-arm-revisited
 
 optional_hidden_info:
-    other_info: 
+    other_info: The official arm64 release is prior to vendor announcement blog refer https://github.com/buildkite/elastic-ci-stack-for-aws/releases/tag/v5.1.0
 
 ---
