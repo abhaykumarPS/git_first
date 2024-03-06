@@ -1,6 +1,6 @@
 ---
-name: AppDynamics
-vendor: AppDynamics APM Platform
+name: AppDynamics APM Platform
+vendor: AppDynamics 
 category: Observability
 description: AppDynamics is the leading provider of Application Intelligence for modern. application architectures operating in distributed, dynamic, and agile environments.
 product_url: https://www.appdynamics.com/
@@ -14,7 +14,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        product_content: https://docs.appdynamics.com/appd/22.x/22.3/en/infrastructure-visibility/machine-agent/machine-agent-requirements-and-supported-environments
+        vendor_announcement: https://docs.appdynamics.com/appd/22.x/22.3/en/infrastructure-visibility/machine-agent/machine-agent-requirements-and-supported-environments
         official_docs: https://docs.appdynamics.com/22.5/en/infrastructure-visibility/machine-agent/install-the-machine-agent
 
 optional_hidden_info:
