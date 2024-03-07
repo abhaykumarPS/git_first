@@ -13,7 +13,7 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
+        arm_content: https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/drone-io-ci-cd-tool-for-developers
         product_content: https://blog.drone.io/drone-announces-official-support-for-arm/
         official_docs: https://docs.drone.io/cli/install/
 
