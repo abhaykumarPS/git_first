@@ -1,7 +1,7 @@
 ---
 name: Safeguard Authentication Services
 vendor: One Identity
-category: Security
+category: Security applications
 description: Safeguard Authentication Services enables you to simplify. identity management based on your existing AD investment.
 product_url: https://www.oneidentity.com/
 works_on_arm: true
