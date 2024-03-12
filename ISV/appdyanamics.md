@@ -15,8 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content: 
         vendor_announcement: https://docs.appdynamics.com/appd/22.x/22.2/ja/product-and-release-announcements/past-releases/past-agent-releases#PastAgentReleases-Version22.2.0-February24,2022.1
-        official_docs: https://docs.appdynamics.com/22.5/en/infrastructure-visibility/machine-agent/install-the-machine-agent
-
+        official_docs: https://docs.appdynamics.com/appd/21.x/latest/en/appdynamics-essentials/getting-started
 optional_hidden_info:
     other_info: 
 
