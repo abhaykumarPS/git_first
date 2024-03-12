@@ -2,7 +2,7 @@
 name: Travis CI (SaaS)
 vendor: Travis CI 
 category: DevOps
-description: Travis CI is a hosted continuous integration service used to build and test software projects hosted on GitHub, Bitbucket, GitLab, Perforce, Apache Subversion and Assembla.
+description: Travis CI is a hosted continuous integration service used to build and test software projects hosted on GitHub, Bitbucket and GitLab.
 product_url: https://www.travis-ci.com/
 works_on_arm: true
 release_date_on_arm: 07/10/2019
