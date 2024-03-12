@@ -1,7 +1,7 @@
 ---
 name: AppDynamics APM Platform
 vendor: AppDynamics 
-category: Observability
+category: Monitoring/Observability
 description: AppDynamics is the leading provider of Application Intelligence for modern. application architectures operating in distributed, dynamic, and agile environments.
 product_url: https://www.appdynamics.com/
 works_on_arm: true
