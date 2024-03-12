@@ -15,7 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content: 
         vendor_announcement: https://buildkite.com/changelog/115-aws-elastic-stack-support-for-arm-instances-rocket
-        official_docs: https://buildkite.com/blog/buildkite-and-arm-revisited
+        official_docs: https://buildkite.com/docs/agent/v3/elastic-ci-aws
 
 optional_hidden_info:
     other_info: The official arm64 release is prior to vendor announcement blog refer https://github.com/buildkite/elastic-ci-stack-for-aws/releases/tag/v5.1.0
