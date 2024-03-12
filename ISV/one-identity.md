@@ -14,7 +14,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: 
-        vendor_announcement: https://support.oneidentity.com/technical-documents/safeguard-authentication-services/5.0.1/installation-guide/3#TOPIC-1559368
+        vendor_announcement: https://support.oneidentity.com/technical-documents/safeguard-authentication-services/5.0.1/release-notes#TOPIC-1565570
         official_docs: https://support.oneidentity.com/technical-documents/safeguard-authentication-services/5.0.1/installation-guide
 
 optional_hidden_info:
