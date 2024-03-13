@@ -15,7 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content: https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/drone-io-ci-cd-tool-for-developers
         vendor_announcement: https://blog.drone.io/drone-announces-official-support-for-arm/
-        official_docs: https://docs.drone.io/cli/install/
+        official_docs: https://docs.drone.io/runner/docker/installation/linux/
 
 optional_hidden_info:
     other_info: 
