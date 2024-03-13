@@ -1,28 +1,28 @@
 ---
-name: 
-category: 
-description: 
-download_url: 
+name: CockroachDB
+category: Database
+description: CockroachDB is a cloud-native distributed SQL database designed to build, scale, and manage modern, data-intensive applications.
+download_url: https://www.cockroachlabs.com/docs/releases/
 works_on_arm: true
 supported_minimum_version:
-    version_number: 
-    release_date: 
+    version_number: 22.2.5
+    release_date: 16/02/2023
 
 optional_info:
-    homepage_url: 
+    homepage_url: https://www.cockroachlabs.com/
     support_caveats:
     alternative_options:
     getting_started_resources:
         arm_content: 
         partner_content: 
-        official_docs: 
+        official_docs: https://www.cockroachlabs.com/docs/v23.2/install-cockroachdb-linux
     arm_recommended_minimum_version:
         version_number: 
         release_date:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: 
+    release_notes__supported_minimum: https://www.cockroachlabs.com/docs/releases/v23.1#v23-1-13
     release_notes__recommended_minimum:
     other_info: 
     
