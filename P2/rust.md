@@ -15,7 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content: https://github.com/ArmDeveloperEcosystem/arm-learning-paths/blob/main/content/install-guides/rust.md
         partner_content: https://aws.amazon.com/sdk-for-rust/
-        official_docs: https://doc.rust-lang.org/book/ch01-01-installation.html
+        official_docs: https://www.rust-lang.org/tools/install
     arm_recommended_minimum_version:
         version_number: 
         release_date:
