@@ -17,12 +17,12 @@ optional_info:
         partner_content: https://aws.amazon.com/sdk-for-rust/
         official_docs: https://www.rust-lang.org/tools/install
     arm_recommended_minimum_version:
-        version_number: 
+        version_number:
         release_date:
 
 optional_hidden_info:
-    release_notes__supported_minimum: 
+    release_notes__supported_minimum:
     release_notes__recommended_minimum:
     other_info: No ARM64 release notes are available. Installation and testing is done via tar.
-    
+ 
 ---
