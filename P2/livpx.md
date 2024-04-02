@@ -15,7 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content: https://developer.arm.com/documentation/102651/a/Use-case--improving-VP9-performance
         partner_content: 
-        official_docs: 
+        official_docs: https://github.com/webmproject/libvpx/blob/main/README
     arm_recommended_minimum_version:
         version_number: 
         release_date:
