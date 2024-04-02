@@ -13,13 +13,12 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-        partner_content: 
+        arm_content:
+        partner_content:
         official_docs: https://www.cockroachlabs.com/docs/v23.2/install-cockroachdb-linux
     arm_recommended_minimum_version:
-        version_number: 
+        version_number:
         release_date:
-
 
 optional_hidden_info:
     release_notes__supported_minimum: https://www.cockroachlabs.com/docs/releases/v22.2?#v22-2-5
