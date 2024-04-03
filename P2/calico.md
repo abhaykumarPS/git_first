@@ -1,7 +1,7 @@
 ---
 name: Calico
 category: Containers and Orchestration
-description: Calico is an open-source project with an active development and user community.
+description: Calico is an open-source project with an active development and user community. Calico Open Source has grown to be the most widely adopted solution for container networking and security.
 download_url: https://github.com/projectcalico/calico/releases
 works_on_arm: true
 supported_minimum_version:
