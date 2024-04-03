@@ -1,12 +1,12 @@
 ---
 name: Quartz
 category: Messaging/Comms
-description: Quartz is a richly featured, open source job scheduling library that can be integrated within virtually any Java application - from the smallest stand-alone application to the largest e-commerce system.
+description: Quartz is a richly featured, open source job scheduling library that can be integrated within virtually any Java application.
 download_url: https://www.quartz-scheduler.org/downloads/
 works_on_arm: true
 supported_minimum_version:
-    version_number: 
-    release_date: 
+    version_number: 2.3.1
+    release_date: 27/03/2019
 
 
 optional_info:
@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: 
+    other_info: No ARM64 release notes are available. Installation and testing is done using released source code tar.
     
 ---
