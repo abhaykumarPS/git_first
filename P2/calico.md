@@ -15,8 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content:
         partner_content:
-        official_docs: https://docs.tigera.io/calico/latest/getting-started/kubernetes/requirements
-        
+        official_docs: https://docs.tigera.io/calico/latest/getting-started/kubernetes/requirements    
     arm_recommended_minimum_version:
         version_number:
         release_date:
