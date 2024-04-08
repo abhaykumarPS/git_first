@@ -13,18 +13,18 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-        partner_content: 
+        arm_content:
+        partner_content:
         official_docs: https://docs.tigera.io/calico/latest/getting-started/kubernetes/requirements
         
     arm_recommended_minimum_version:
-        version_number: 
+        version_number:
         release_date:
 
 
 optional_hidden_info:
     release_notes__supported_minimum: https://github.com/projectcalico/calico/releases/tag/v3.21.3
     release_notes__recommended_minimum:
-    other_info: 
-    
+    other_info:
+
 ---
