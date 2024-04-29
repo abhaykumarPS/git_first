@@ -14,17 +14,17 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-        partner_content: 
+        arm_content:
+        partner_content:
         official_docs: https://min.io/download#/agpl-linux
     arm_recommended_minimum_version:
-        version_number: 
+        version_number:
         release_date:
 
 
 optional_hidden_info:
     release_notes__supported_minimum: https://github.com/minio/minio/releases/tag/RELEASE.2017-01-25T03-14-52Z
     release_notes__recommended_minimum:
-    other_info: 
-    
+    other_info:
+
 ---
