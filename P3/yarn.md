@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: https://yarnpkg.com/blog/release/3.1
     release_notes__recommended_minimum:
-    other_info: 
+    other_info: From version 3.1, Linux/ARM64 support is included in the .yarnc.ymal file, kindley refer [here](https://yarnpkg.com/configuration/yarnrc#supportedArchitectures)
     
 ---
