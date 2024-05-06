@@ -2,7 +2,7 @@
 name: Oracle SQL
 category: Databases - SQL
 description: Oracle SQL Developer is a free, integrated development environment that simplifies the development and management of Oracle Database in both traditional and Cloud deployments.
-download_url: https://www.oracle.com/database/sqldeveloper/technologies/download/ 
+download_url: https://www.oracle.com/in/database/technologies/oracle-database-software-downloads.html 
 works_on_arm: true
 supported_minimum_version:
     version_number: 19c
@@ -23,7 +23,7 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: https://www.oracle.com/in/database/technologies/oracle-database-software-downloads.html
+    release_notes__supported_minimum: https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html
     release_notes__recommended_minimum:
     other_info: ARM64 support got added in oracle sql from v19c refer [official documentation](https://docs.oracle.com/en/learn/ol-db-arm/index.html#introduction)"
     
