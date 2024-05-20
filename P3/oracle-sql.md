@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html
     release_notes__recommended_minimum:
-    other_info: Oracle SQL supported ARM64 architecture starting from version 19c, kindly refer [here](https://docs.oracle.com/en/learn/ol-db-arm/index.html#introduction). To download Oracle SQL, users will need to create an account on the Oracle website. 
+    other_info: Oracle SQL supports ARM64 architecture starting from version 19c, kindly refer [here](https://docs.oracle.com/en/learn/ol-db-arm/index.html#introduction). To download Oracle SQL, users will need to create an account on the Oracle website. 
     
 ---
