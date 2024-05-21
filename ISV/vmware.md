@@ -1,11 +1,11 @@
 ---
-name: VMware
+name: VMware Vsphere
 vendor: VMware
 category: Operating System
-description: VMware is a software company that provides virtualization technology. This lets you run multiple operating systems on a single physical computer, saving resources and increasing efficiency.
-product_url: https://www.vmware.com/products/desktop-hypervisor.html
+description: VMware vSphere is VMware's virtualization platform, which transforms data centers into aggregated computing infrastructures that include CPU, storage, and networking resources.
+product_url: https://www.vmware.com/products/vsphere.html
 works_on_arm: true
-release_date_on_arm: 25/02/2020
+release_date_on_arm: 06/10/2020
 
 
 optional_info:
@@ -14,10 +14,10 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/vmware-and-arm-at-the-edge
-        vendor_announcement: https://blogs.vmware.com/arm/2020/02/25/hello-arm-world/
-        official_docs: https://www.vmware.com/pdf/vmware_player310.pdf
+        vendor_announcement: https://blogs.vmware.com/vsphere/2020/10/announcing-the-esxi-arm-fling.html
+        official_docs: https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.install.doc/GUID-A71D7F56-6F47-43AB-9C4E-BAA89310F295.html
 
 optional_hidden_info:
-    other_info: 
+    other_info:
 
 ---
