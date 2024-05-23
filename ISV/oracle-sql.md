@@ -15,7 +15,7 @@ optional_info:
     getting_started_resources:
         arm_content: 
         vendor_announcement: https://www.oracle.com/database/technologies/oracle19c-linux-arm64-downloads.html
-        official_docs: https://docs.oracle.com/en/database/oracle/oracle-database/19/lacli/installing-ic-arm.html#GUID-09538EE8-5EE8-4319-9B17-DCE0EF0154A0 
+        official_docs: https://docs.oracle.com/en/learn/ol-db-arm/index.html#introduction 
 
 optional_hidden_info:
     other_info: 
