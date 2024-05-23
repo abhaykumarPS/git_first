@@ -1,5 +1,5 @@
 ---
-name: RedHat Jboss Web Server
+name: Red Hat Jboss Web Server
 category: Web Server
 description: An application platform for hosting users apps that provides an innovative modular, cloud-ready architecture, powerful management and automation, and world class developer productivity.
 download_url: https://developers.redhat.com/products/red-hat-jboss-web-server/download
