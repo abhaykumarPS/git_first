@@ -1,7 +1,7 @@
 ---
 name: Sendbird UIKit
 category: Messaging/Comms
-description: The Sendbird UIKit helps user quickly build in-app chat with customizable, pre-built UI components. 
+description: The Sendbird UIKit helps user quickly build in-app chat with customizable, pre-built UI components.
 download_url: https://github.com/sendbird/sendbird-uikit-react/releases
 works_on_arm: true
 supported_minimum_version:
