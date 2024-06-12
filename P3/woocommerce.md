@@ -8,7 +8,6 @@ supported_minimum_version:
     version_number: 8.9.2
     release_date: 04/06/2024
 
-
 optional_info:
     homepage_url: https://github.com/woocommerce/woocommerce/releases
     support_caveats:
@@ -20,7 +19,6 @@ optional_info:
     arm_recommended_minimum_version:
         version_number: 
         release_date:
-
 
 optional_hidden_info:
     release_notes__supported_minimum: 
