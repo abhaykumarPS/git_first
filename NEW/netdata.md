@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: https://github.com/netdata/netdata/releases/tag/v1.32.0
     release_notes__recommended_minimum:
-    other_info: 
+    other_info: Linux/ARM64 release notes are not available. The first Linux/ARM64 tar is available in version v1.32.0.
     
 ---
