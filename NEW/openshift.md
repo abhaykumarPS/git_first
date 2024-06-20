@@ -15,7 +15,7 @@ optional_info:
     alternative_options:
     getting_started_resources:
         arm_content: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/software-innovations-with-red-hat-and-arm
-        partner_content: https://learn.microsoft.com/en-us/azure/openshift/quickstart-openshift-arm-bicep-template?pivots=aro-arm 
+        partner_content: 
         official_docs: https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-installing-sno.html
     arm_recommended_minimum_version:
         version_number: 
