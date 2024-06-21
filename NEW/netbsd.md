@@ -1,7 +1,7 @@
 ---
 name: NetBSD
 category: Operating System
-description: NetBSD is a free, fast, secure, and highly portable Unix-like Open Source operating system. It is available for a wide range of platforms, from large-scale servers.
+description: NetBSD is a free and secure operating system similar to Unix. It's known for being fast and can run on many different types of computers, from large servers to smaller devices.
 download_url: https://www.netbsd.org/releases/
 works_on_arm: true
 supported_minimum_version:
@@ -14,8 +14,8 @@ optional_info:
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-        partner_content: 
+        arm_content:
+        partner_content:
         official_docs: https://www.netbsd.org/docs/guide/en/part-install.html
     arm_recommended_minimum_version:
         version_number: 
@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: https://www.netbsd.org/releases/formal-9/NetBSD-9.0.html
     release_notes__recommended_minimum:
-    other_info: 
-    
+    other_info:
+
 ---
