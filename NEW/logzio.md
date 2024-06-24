@@ -1,7 +1,7 @@
 ---
 name: logzio-agent-manifest
 category: Monitoring/Observability
-description: Logz.io delivers unified, full stack observability and security as a fully-managed SaaS based on best-of-breed open source.
+description: Logzio-agent-manifest is a collection of scripts that helps you send logs, performance data, and error tracking information from your applications to Logz.io for analysis and storage.
 download_url: https://github.com/logzio/logzio-agent-manifest/releases
 works_on_arm: true
 supported_minimum_version:
