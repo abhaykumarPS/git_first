@@ -1,7 +1,7 @@
 ---
 name: NetBSD
 category: Operating System
-description: NetBSD is a free and secure operating system similar to Unix. It's known for being fast and can run on many different types of computers, from large servers to smaller devices.
+description: NetBSD is a fast, secure, and free operating system similar to Unix, designed to run on a wide range of computers from large servers to smaller devices.
 download_url: https://www.netbsd.org/releases/
 works_on_arm: true
 supported_minimum_version:
