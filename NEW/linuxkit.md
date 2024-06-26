@@ -1,0 +1,30 @@
+---
+name: linuxkit
+category: Operating System
+description: LinuxKit is a tool for building and managing custom Linux distributions that are optimized for containerized applications.
+download_url: https://github.com/linuxkit/linuxkit/releases
+works_on_arm: true
+supported_minimum_version:
+    version_number: v0.2
+    release_date: 26/01/2018
+
+
+optional_info:
+    homepage_url: 
+    support_caveats:
+    alternative_options:
+    getting_started_resources:
+        arm_content: 
+        partner_content: 
+        official_docs: https://github.com/linuxkit/linuxkit?tab=readme-ov-file#getting-started
+    arm_recommended_minimum_version:
+        version_number: 
+        release_date:
+
+
+optional_hidden_info:
+    release_notes__supported_minimum: https://github.com/linuxkit/linuxkit/releases/tag/v0.2
+    release_notes__recommended_minimum:
+    other_info: 
+    
+---
