@@ -23,8 +23,8 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: https://github.com/qiniu/qshell/releases/tag/v2.4.3
+    release_notes__supported_minimum:
     release_notes__recommended_minimum:
-    other_info: Linux/ARM64 release notes are not available. The first Linux/ARM64 tar is available in version v2.4.3.
+    other_info: Linux/ARM64 release notes are not available. The first Linux/ARM64 tar is available in version v[2.4.3](https://github.com/qiniu/qshell/releases/tag/v2.4.3).
     
 ---
