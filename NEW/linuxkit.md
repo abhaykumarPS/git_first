@@ -10,7 +10,7 @@ supported_minimum_version:
 
 
 optional_info:
-    homepage_url: 
+    homepage_url: https://github.com/linuxkit/linuxkit
     support_caveats:
     alternative_options:
     getting_started_resources:
