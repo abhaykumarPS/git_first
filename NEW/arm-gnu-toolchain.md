@@ -5,7 +5,7 @@ description: Arm GNU Toolchain is a community supported, pre-built GNU compiler 
 download_url: https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
 works_on_arm: true
 supported_minimum_version:
-    version_number: /6-2016-q4-major
+    version_number: 6-2016-q4-major
     release_date: 21/12/2016
 
 
