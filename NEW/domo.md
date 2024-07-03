@@ -1,12 +1,12 @@
 ---
 name: Domo-Python-Sdk (pydomo)
-category: 
-description: The Domo-Python-SDK (pydomo) is a Python library facilitating integration with the Domo platform, allowing developers to interact programmatically with Domo's data analytics and visualization services through its API
+category: Languages and Frameworks
+description: Domo-python-sdk is a python library designed to enable seamless integration with the domo platform it empowers developers to programmatically interact with domos data analytics and visualization services via its api.
 download_url: https://pypi.org/project/pydomo/#history
 works_on_arm: true
 supported_minimum_version:
     version_number: 0.1.0
-    release_date: 27/04/2017
+    release_date: 2017/04/27
 
 
 optional_info:
