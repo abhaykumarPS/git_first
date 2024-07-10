@@ -1,6 +1,6 @@
 ---
 name: Neo4j
-category: Database
+category: Databases - noSQL
 description: Neo4j is a state-of-the-art graph database designed to handle data with complex interconnections unlike conventional databases it utilizes a graph-based approach where data is represented as nodes entities and edges connections.
 download_url: https://github.com/neo4j/neo4j/tags
 works_on_arm: true
