@@ -1,5 +1,4 @@
 ---
-
 name: Sourcefuse
 vendor: Sourcefuse
 category: DevOps
