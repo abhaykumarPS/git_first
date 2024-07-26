@@ -23,7 +23,7 @@ optional_info:
 
 
 optional_hidden_info:
-    release_notes__supported_minimum: https://www.elastic.co/guide/en/logstash/7.9/logstash-7-9-0.html
+    release_notes__supported_minimum: https://www.elastic.co/guide/en/logstash/7.9/logstash-7-9-0.html#_arm64_support_experimental
     release_notes__recommended_minimum:
     other_info:  The first experimental Linux/ARM64 release is rolled out in version v7.9.0.
     
