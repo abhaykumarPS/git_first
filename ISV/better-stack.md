@@ -18,6 +18,7 @@ optional_info:
         official_docs: https://betterstack.com/docs/logs/aws-lambda/
  
 optional_hidden_info:
-    other_info: There hasn't been a specific announcement or blog mentioning ARM64 support, but in the installation steps, it specifies using an [ARM-based instance](https://betterstack.com/docs/logs/aws-ecs/), and they utilize the BetterStack Docker image for ARM64.
+    other_info:  Linux/ARM64-specific announcement isn't available. However, in the installation steps, it is mentioned to use an [ARM-based instance](https://betterstack.com/docs/logs/aws-ecs/), and Linux/ARM64 Better Stack docker image can be used for installation. The min version of docker image that is available for arm64, kindly refer [here](https://hub.docker.com/r/betterstack/aws-ecs-fluent-bit/tags)
+
  
 ---
