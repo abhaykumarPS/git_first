@@ -5,8 +5,8 @@ description: Samba facilitates seamless file and printer sharing between Windows
 download_url: https://github.com/samba-team/samba/tags
 works_on_arm: true
 supported_minimum_version:
-    version_number: v4.15.0
-    release_date: 2021/09/20
+    version_number: v4.11.15
+    release_date: 2020/10/28
 
 
 optional_info:
