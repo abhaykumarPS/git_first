@@ -1,12 +1,12 @@
 ---
 name: Samba
-category: 
+category: Miscellaneous
 description: Samba facilitates seamless file and printer sharing between Windows and Linux devices, streamlining collaboration and connectivity across diverse network systems.
 download_url: https://github.com/samba-team/samba/tags
 works_on_arm: true
 supported_minimum_version:
-    version_number: v4.11.15
-    release_date: 2020/10/28
+    version_number: v4.9.0
+    release_date: 2020/09/13
 
 
 optional_info:
