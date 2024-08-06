@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: Linux/ARM64 release notes are not available. Installation and Testing were done using released tar files.
+    other_info: Linux/ARM64 release notes are currently unavailable. Installation and testing were carried out using the released tar files. Prior to version v5.31.6, a segmentation fault error occurred on both x86_64 and ARM64 platforms.
     
 ---
