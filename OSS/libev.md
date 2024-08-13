@@ -8,7 +8,6 @@ supported_minimum_version:
     version_number: 4.15
     release_date: 2013/03/01
 
-
 optional_info:
     homepage_url: http://software.schmorp.de/pkg/libev.html
     support_caveats:
@@ -19,13 +18,11 @@ optional_info:
         official_docs: https://zoomadmin.com/HowToInstall/UbuntuPackage/libev-libevent-dev
     arm_recommended_minimum_version:
         version_number: 
-        release_date: Linux/ARM64 release notes are not available. Installation and Testing were done using "apt-get install libev-dev". The minimum version of libev 4.15 corresponds to ubuntu:14.04 and 4.33 to ubuntu:22.04.
-
-
+        release_date: 
 
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: 
+    other_info: Linux/ARM64 release notes are not available. Installation and Testing were done using "apt-get install libev-dev". The minimum version of libev 4.15 corresponds to ubuntu:14.04 and 4.33 to ubuntu:22.04.
     
 ---
