@@ -1,5 +1,5 @@
 ---
-name: Nmap 
+name: Network Mapper (Nmap)
 category: Security applications
 description: Nmap is a powerful network exploration utility that enables the detection of live hosts, open ports, and operational services within a network, making it an indispensable tool for network reconnaissance and vulnerability assessment
 download_url: https://nmap.org/download.html
