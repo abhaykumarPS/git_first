@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: Linux/ARM64 release notes are not available. Installation and Testing were done using "apt-get install nmap". The minimum version of dnsmasq 6.40 corresponds to ubuntu:14.04 and 7.80 to ubuntu:22.04.
+    other_info: Linux/ARM64 release notes are not available. Installation and Testing were done using "apt-get install nmap". The minimum version of nmap 6.40 corresponds to ubuntu:14.04 and 7.80 to ubuntu:22.04.
  
 ---
