@@ -10,21 +10,20 @@ supported_minimum_version:
 
 
 optional_info:
-    homepage_url: https://www.alluxio.io/ 
+    homepage_url: https://www.alluxio.io/
     support_caveats:
     alternative_options:
     getting_started_resources:
-        arm_content: 
-        partner_content: 
+        arm_content:
+        partner_content:
         official_docs: https://docs.alluxio.io/os/user/stable/en/overview/Getting-Started.html
     arm_recommended_minimum_version:
-        version_number: 
+        version_number:
         release_date:
 
-
 optional_hidden_info:
-    release_notes__supported_minimum: 
+    release_notes__supported_minimum:
     release_notes__recommended_minimum:
     other_info: Linux/ARM64 release notes are not available. Installation and testing were done using released tar files.
-    
+
 ---
