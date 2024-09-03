@@ -21,7 +21,6 @@ optional_info:
         version_number:
         release_date:
 
-
 optional_hidden_info:
     release_notes__supported_minimum:
     release_notes__recommended_minimum:
