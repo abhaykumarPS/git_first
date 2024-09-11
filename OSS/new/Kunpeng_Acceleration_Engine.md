@@ -5,8 +5,8 @@ description: Kunpeng Acceleration Engine (KAE) speeds up data encryption, decryp
 download_url: https://github.com/kunpengcompute/KAE/releases
 works_on_arm: true
 supported_minimum_version:
-    version_number: v1.2.10
-    release_date: 2020/02/05
+    version_number: v1.3.6
+    release_date: 2020/07/31
 
 
 optional_info:
@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: There are no release notes available for Linux/ARM64. The first binary release is rolled out in version v[1.2.10](https://github.com/kunpengcompute/KAE/releases/tag/v1.2.10).
+    other_info: There are no release notes available for Linux/ARM64. The first binary release is rolled out in version v[1.2.10](https://github.com/kunpengcompute/KAE/releases/tag/1.3.6).
     
 ---
