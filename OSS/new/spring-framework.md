@@ -25,6 +25,6 @@ optional_info:
 optional_hidden_info:
     release_notes__supported_minimum: 
     release_notes__recommended_minimum:
-    other_info: I found a discussion about building and testing the Spring Framework on Linux ARM64, where the project's maintainer stated that official ARM64 support is not available. Kindly refer [here](https://github.com/spring-projects/spring-framework/issues/26351)
+    other_info: A discussion was found regarding building and testing the Spring Framework on Linux ARM64, where the project's maintainer mentioned that official ARM64 support is not currently available. More details can be found [here](https://github.com/spring-projects/spring-framework/issues/26351)
 
 ---
